@@ -1,0 +1,87 @@
+/* Fondo animado con gradientes */
+body {
+  transition: background-color 0.5s, color 0.5s;
+}
+.gradient {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Navbar fija y con sombra */
+.navbar {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Dark Mode */
+.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+.dark-mode .navbar, 
+.dark-mode .card,
+.dark-mode footer {
+  background-color: #1e1e1e;
+  border-color: #333;
+}
+.dark-mode a { color: #90caf9; }
+
+/* Foto del Desarrollador */
+.dev-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+/* Texto animado para el nombre */
+.animated-name {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  animation: textFadeIn 3s ease-in-out infinite;
+}
+@keyframes textFadeIn {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* Espaciado para secciones */
+section {
+  padding: 60px 0;
+}
+
+/* Estilo para las cards con efecto hover y latido */
+.card {
+  border: 1px solid #ddd;
+  transition: transform 0.3s;
+}
+.card:hover {
+  transform: scale(1.02);
+}
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+.heartbeat {
+  animation: heartbeat 2s infinite;
+}
+
+/* Social icons */
+.social-icons a {
+  color: inherit;
+  margin: 0 10px;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+.social-icons a:hover {
+  color: #007bff;
+}
+
